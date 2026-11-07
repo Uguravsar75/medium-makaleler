@@ -12,6 +12,7 @@ Her klasörde ilgili makalenin tüm grafiklerini ve rakamlarını baştan ürete
 | # | Makale | Konular | Kod |
 |---|--------|---------|-----|
 | 01 | [Ortalama Yalan Söyler: Grafiğe Bakmadan Karar Vermeyin](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a) | Tanımlayıcı istatistik · EDA · Veri görselleştirme · Veri kalitesi | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
+| 02 | [Accuracy %99,9, Peki Model İşe Yarıyor mu? Dengesiz Veride Doğru Metrik Seçimi](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8) | Dengesiz veri · Precision/Recall · ROC vs PR · Karar eşiği | [`02_accuracy_yaniltir`](02_accuracy_yaniltir/) |
 
 ---
 
@@ -33,13 +34,32 @@ Tek bir özet istatistiğin (ortalama, korelasyon) neden yanıltıcı olabilece�
 
 ---
 
+## 02 · Accuracy %99,9, Peki Model İşe Yarıyor mu?
+
+![Kapak](02_accuracy_yaniltir/gorseller/00_kapak.png)
+
+📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8)**
+
+Dengesiz veride accuracy’nin neden yanıltıcı olabileceğini ve bir sınıflandırma modelini hangi ölçütlerle değerlendirebileceğimizi gösterir:
+
+1. **Tembel model:** Her işleme “normal” diyen model test setinde %99,87 doğruluk alıyor, ama hiçbir dolandırıcılığı yakalamıyor.
+2. **Üç model karşılaştırması:** Lojistik regresyon dolandırıcılıkların %49’unu, dengeli (class_weight="balanced") model %88’ini yakalıyor; accuracy ise üçünde birbirine çok yakın.
+3. **ROC vs Precision–Recall:** Aynı model için ROC-AUC 0,97, average precision 0,71.
+4. **Karar eşiği:** Eşik, eğitim verisinde zaman sıralı çapraz doğrulamayla maliyete göre seçildiğinde, varsayımlarla test setindeki toplam maliyet yaklaşık %60 azalıyor.
+
+**Veri**
+- Kredi kartı dolandırıcılığı veri seti — Eylül 2013, Avrupalı kart sahiplerinin iki günlük 284.807 işlemi (492 dolandırıcılık). ULB Machine Learning Group & Worldline; Kaggle’da “Credit Card Fraud Detection”. Notebook, verinin herkese açık bir GitHub kopyasını kullanır (~100 MB).
+- Dal Pozzolo, A., Caelen, O., Johnson, R. A. & Bontempi, G. (2015). *Calibrating Probability with Undersampling for Unbalanced Classification.* IEEE SSCI, 159–166.
+
+---
+
 ## Çalıştırma
 
 ```bash
 git clone https://github.com/Uguravsar75/medium-makaleler.git
 cd medium-makaleler
 pip install -r requirements.txt
-jupyter notebook 01_ortalama_yalan_soyler/ortalama_yalan_soyler.ipynb
+jupyter notebook   # klasörlerden istediğiniz notebook’u açın
 ```
 
-Veri, notebook içinde doğrudan internetten okunur; ayrıca indirme gerekmez.
+Veriler notebook’ların içinde doğrudan internetten okunur; ayrıca indirme gerekmez.
