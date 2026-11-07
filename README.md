@@ -11,13 +11,15 @@ Her klasörde ilgili makalenin tüm grafiklerini ve rakamlarını baştan ürete
 
 | # | Makale | Konular | Kod |
 |---|--------|---------|-----|
-| 01 | [Ortalama Yalan Söyler: Grafiğe Bakmadan Karar Vermeyin](MEDIUM_LINKI_01) | Tanımlayıcı istatistik · EDA · Veri görselleştirme · Veri kalitesi | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
+| 01 | [Ortalama Yalan Söyler: Grafiğe Bakmadan Karar Vermeyin](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a) | Tanımlayıcı istatistik · EDA · Veri görselleştirme · Veri kalitesi | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
 
 ---
 
 ## 01 · Ortalama Yalan Söyler
 
 ![Kapak](01_ortalama_yalan_soyler/gorseller/00_kapak.png)
+
+📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a)**
 
 Tek bir özet istatistiğin (ortalama, korelasyon) neden yanıltıcı olabileceğini üç örnekle gösterir:
 
