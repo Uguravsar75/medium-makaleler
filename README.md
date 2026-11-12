@@ -14,6 +14,7 @@ Her klasörde ilgili makalenin tüm grafiklerini ve rakamlarını baştan ürete
 | 01 | [Ortalama Yalan Söyler: Grafiğe Bakmadan Karar Vermeyin](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a) | Tanımlayıcı istatistik · EDA · Veri görselleştirme · Veri kalitesi | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
 | 02 | [Accuracy %99,9, Peki Model İşe Yarıyor mu? Dengesiz Veride Doğru Metrik Seçimi](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8) | Dengesiz veri · Precision/Recall · ROC vs PR · Karar eşiği | [`02_accuracy_yaniltir`](02_accuracy_yaniltir/) |
 | 03 | [Yapay Zekâ İşleri mi Alıyor, Yoksa Sadece Suçu mu Üstleniyor?](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58) | Veri doğrulama · Zaman serisi · Bootstrap / Mann-Whitney · Power BI | [`03_ai_isten_cikarma`](03_ai_isten_cikarma/) |
+| 04 | [Yağmur Yağdı, Barajlar Neden Dolmadı? İstanbul’un Suyunu Veriyle Okumak](https://medium.com/@uguravsar10/ya%C4%9Fmur-ya%C4%9Fd%C4%B1-barajlar-neden-dolmad%C4%B1-i%CC%87stanbulun-suyunu-veriyle-okumak-898cf159f325) | Zaman serisi · Mevsimsellik · Korelasyonu sorgulamak · Veri kalitesi | [`04_istanbul_barajlari`](04_istanbul_barajlari/) |
 
 ---
 
@@ -71,6 +72,25 @@ Softito Veri Analitiği bitirme projemin hikâyesi: 2026’daki 643 işten çık
 **Veri**
 - Projenin temizlenmiş dosyaları: [Uguravsar75/ai-layoffs-vs-hiring-2026](https://github.com/Uguravsar75/ai-layoffs-vs-hiring-2026)
 - layoffhedge.com 2026 işten çıkarma listesi (8 Kasım 2026 sürümü) · Indeed Hiring Lab AI Tracker (CC BY 4.0) · Challenger, Gray & Christmas aylık raporları
+
+---
+
+## 04 · Yağmur Yağdı, Barajlar Neden Dolmadı?
+
+![Kapak](04_istanbul_barajlari/gorseller/00_kapak.png)
+
+📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/ya%C4%9Fmur-ya%C4%9Fd%C4%B1-barajlar-neden-dolmad%C4%B1-i%CC%87stanbulun-suyunu-veriyle-okumak-898cf159f325)**
+
+İBB’nin açık verisiyle İstanbul barajlarının doluluğuna, havzalara düşen yağışa ve su tüketimine bakar:
+
+1. **Kurak dönemler:** 2005–2021 arasında doluluk 2007–2008, 2014 ve 2020–2021’de %30’un altına indi (toplam 638 gün; en düşük %9,2, Kasım 2007).
+2. **Yıllık döngü:** Yağışın %53,9’u Kasım–Mart’ta düşüyor; barajlar Nisan’da zirve, Kasım’da dip yapıyor, tüketim Temmuz’da en yüksek.
+3. **2014:** Su yılı yağışı ortalamanın üstündeydi ama kış dokuz yılın en kurağıydı; barajlar 16 Eylül 2014’te %14,5’e indi.
+4. **Korelasyonu sorgulamak:** Kış yağışı ile bahar zirvesi arasındaki 0,62’lik korelasyon büyük ölçüde 2014’ten geliyor; 2014 hariç −0,04.
+5. **Tüketim:** Ortalama günlük tüketim 2011’den 2023’e %35,6 arttı ve hiçbir yıl düşmedi.
+
+**Veri**
+- İBB Açık Veri Portalı (İSKİ verileri): baraj doluluk oranı (2005–2021), havza yağışı ve günlük su tüketimi (2011–2024). Ham dosyalar: [Uguravsar75/istanbul-baraj-analizi](https://github.com/Uguravsar75/istanbul-baraj-analizi)
 
 ---
 
