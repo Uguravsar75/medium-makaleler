@@ -1,106 +1,110 @@
-# Veri Notları — Medium Makaleleri
+# Data Notes — Medium Articles
 
-Medium’da yazdığım veri analizi, istatistik ve makine öğrenmesi yazılarının kodları.
-Her klasörde ilgili makalenin tüm grafiklerini ve rakamlarını baştan üreten, çalıştırılmış bir Jupyter notebook bulunur.
+**English** | [Türkçe](README.tr.md)
 
-**Yazar:** Uğur Avşar · [Medium](https://medium.com/@uguravsar10) · [LinkedIn](https://www.linkedin.com/in/uguravsarr)
+Code behind my data analysis, statistics and machine learning articles on Medium.
+Each folder contains an executed Jupyter notebook that reproduces every chart and number in the related article from scratch.
+
+> The articles are written in **Turkish**. The notebooks, charts and numbers can be followed without reading Turkish.
+
+**Author:** Uğur Avşar · [Medium](https://medium.com/@uguravsar10) · [LinkedIn](https://www.linkedin.com/in/uguravsarr)
 
 ---
 
-## Makaleler
+## Articles
 
-| # | Makale | Konular | Kod |
+| # | Article (Turkish title → English) | Topics | Code |
 |---|--------|---------|-----|
-| 01 | [Ortalama Yalan Söyler: Grafiğe Bakmadan Karar Vermeyin](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a) | Tanımlayıcı istatistik · EDA · Veri görselleştirme · Veri kalitesi | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
-| 02 | [Accuracy %99,9, Peki Model İşe Yarıyor mu? Dengesiz Veride Doğru Metrik Seçimi](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8) | Dengesiz veri · Precision/Recall · ROC vs PR · Karar eşiği | [`02_accuracy_yaniltir`](02_accuracy_yaniltir/) |
-| 03 | [Yapay Zekâ İşleri mi Alıyor, Yoksa Sadece Suçu mu Üstleniyor?](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58) | Veri doğrulama · Zaman serisi · Bootstrap / Mann-Whitney · Power BI | [`03_ai_isten_cikarma`](03_ai_isten_cikarma/) |
-| 04 | [Yağmur Yağdı, Barajlar Neden Dolmadı? İstanbul’un Suyunu Veriyle Okumak](https://medium.com/@uguravsar10/ya%C4%9Fmur-ya%C4%9Fd%C4%B1-barajlar-neden-dolmad%C4%B1-i%CC%87stanbulun-suyunu-veriyle-okumak-898cf159f325) | Zaman serisi · Mevsimsellik · Korelasyonu sorgulamak · Veri kalitesi | [`04_istanbul_barajlari`](04_istanbul_barajlari/) |
+| 01 | [Ortalama Yalan Söyler](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a) — *The Average Lies: Don't Decide Without Looking at the Chart* | Descriptive statistics · EDA · Data visualization · Data quality | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
+| 02 | [Accuracy %99,9, Peki Model İşe Yarıyor mu?](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8) — *99.9% Accuracy, but Does the Model Work? Choosing the Right Metric for Imbalanced Data* | Imbalanced data · Precision/Recall · ROC vs PR · Decision threshold | [`02_accuracy_yaniltir`](02_accuracy_yaniltir/) |
+| 03 | [Yapay Zekâ İşleri mi Alıyor, Yoksa Sadece Suçu mu Üstleniyor?](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58) — *Is AI Taking Jobs, or Just Taking the Blame?* | Data validation · Time series · Bootstrap / Mann-Whitney · Power BI | [`03_ai_isten_cikarma`](03_ai_isten_cikarma/) |
+| 04 | [Yağmur Yağdı, Barajlar Neden Dolmadı?](https://medium.com/@uguravsar10/ya%C4%9Fmur-ya%C4%9Fd%C4%B1-barajlar-neden-dolmad%C4%B1-i%CC%87stanbulun-suyunu-veriyle-okumak-898cf159f325) — *It Rained, So Why Didn't the Dams Fill? Reading Istanbul's Water with Data* | Time series · Seasonality · Questioning correlation · Data quality | [`04_istanbul_barajlari`](04_istanbul_barajlari/) |
 
 ---
 
-## 01 · Ortalama Yalan Söyler
+## 01 · The Average Lies
 
-![Kapak](01_ortalama_yalan_soyler/gorseller/00_kapak.png)
+![Cover](01_ortalama_yalan_soyler/gorseller/00_kapak.png)
 
-📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a)**
+📖 **[Read the article on Medium (Turkish)](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a)**
 
-Tek bir özet istatistiğin (ortalama, korelasyon) neden yanıltıcı olabileceğini üç örnekle gösterir:
+Three examples of why a single summary statistic (the mean, a correlation) can mislead:
 
-1. **Taksi ücretleri:** Sağa çarpık dağılımda ortalama (13,09 $) ile medyan (9,50 $) arasındaki fark; yolculukların %70’inde ücret ortalamanın altında.
-2. **Anscombe Dörtlüsü:** Özet istatistikleri aynı, grafikleri bambaşka dört veri seti.
-3. **Bahşişler:** Yolculukların %36’sında bahşiş sıfır görünüyor; ödeme yöntemine göre ayırınca bunun nakit bahşişlerin kayda girmemesinden kaynaklandığı ortaya çıkıyor.
+1. **Taxi fares:** In a right-skewed distribution, the mean ($13.09) and the median ($9.50) differ; 70% of trips cost less than the average.
+2. **Anscombe's quartet:** Four data sets with the same summary statistics and completely different charts.
+3. **Tips:** 36% of trips show a zero tip; splitting by payment method reveals that cash tips are simply not recorded.
 
-**Veri**
-- NYC Taxi & Limousine Commission (TLC) kayıtlarından alınmış, Mart 2019’a ait 6.433 taksi yolculuğu — [seaborn `taxis` örnek veri seti](https://github.com/mwaskom/seaborn-data)
+**Data**
+- 6,433 taxi trips from March 2019, taken from NYC Taxi & Limousine Commission (TLC) records — [seaborn `taxis` sample data set](https://github.com/mwaskom/seaborn-data)
 - Anscombe, F. J. (1973). *Graphs in Statistical Analysis.* The American Statistician, 27(1), 17–21.
 
 ---
 
-## 02 · Accuracy %99,9, Peki Model İşe Yarıyor mu?
+## 02 · 99.9% Accuracy, but Does the Model Work?
 
-![Kapak](02_accuracy_yaniltir/gorseller/00_kapak.png)
+![Cover](02_accuracy_yaniltir/gorseller/00_kapak.png)
 
-📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8)**
+📖 **[Read the article on Medium (Turkish)](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8)**
 
-Dengesiz veride accuracy’nin neden yanıltıcı olabileceğini ve bir sınıflandırma modelini hangi ölçütlerle değerlendirebileceğimizi gösterir:
+Why accuracy can mislead on imbalanced data, and which measures to use to evaluate a classifier instead:
 
-1. **Tembel model:** Her işleme “normal” diyen model test setinde %99,87 doğruluk alıyor, ama hiçbir dolandırıcılığı yakalamıyor.
-2. **Üç model karşılaştırması:** Lojistik regresyon dolandırıcılıkların %49’unu, dengeli (class_weight="balanced") model %88’ini yakalıyor; accuracy ise üçünde birbirine çok yakın.
-3. **ROC vs Precision–Recall:** Aynı model için ROC-AUC 0,97, average precision 0,71.
-4. **Karar eşiği:** Eşik, eğitim verisinde zaman sıralı çapraz doğrulamayla maliyete göre seçildiğinde, varsayımlarla test setindeki toplam maliyet yaklaşık %60 azalıyor.
+1. **The lazy model:** A model that calls every transaction "normal" scores 99.87% accuracy on the test set but catches no fraud at all.
+2. **Three models compared:** Logistic regression catches 49% of fraud cases, the balanced model (class_weight="balanced") 88%; their accuracy is almost identical.
+3. **ROC vs. Precision–Recall:** For the same model, ROC-AUC is 0.97 while average precision is 0.71.
+4. **Decision threshold:** When the threshold is chosen by cost with time-ordered cross-validation on the training data, the total cost on the test set falls by about 60% (under the stated assumptions).
 
-**Veri**
-- Kredi kartı dolandırıcılığı veri seti — Eylül 2013, Avrupalı kart sahiplerinin iki günlük 284.807 işlemi (492 dolandırıcılık). ULB Machine Learning Group & Worldline; Kaggle’da “Credit Card Fraud Detection”. Notebook, verinin herkese açık bir GitHub kopyasını kullanır (~100 MB).
+**Data**
+- Credit card fraud data set — 284,807 transactions by European cardholders over two days in September 2013 (492 frauds). ULB Machine Learning Group & Worldline; "Credit Card Fraud Detection" on Kaggle. The notebook uses a public GitHub copy of the data (~100 MB).
 - Dal Pozzolo, A., Caelen, O., Johnson, R. A. & Bontempi, G. (2015). *Calibrating Probability with Undersampling for Unbalanced Classification.* IEEE SSCI, 159–166.
 
 ---
 
-## 03 · Yapay Zekâ İşleri mi Alıyor, Yoksa Sadece Suçu mu Üstleniyor?
+## 03 · Is AI Taking Jobs, or Just Taking the Blame?
 
-![Kapak](03_ai_isten_cikarma/gorseller/00_kapak.png)
+![Cover](03_ai_isten_cikarma/gorseller/00_kapak.png)
 
-📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58)**
+📖 **[Read the article on Medium (Turkish)](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58)**
 
-Softito Veri Analitiği bitirme projemin hikâyesi: 2026’daki 643 işten çıkarma duyurusunu haber kaynaklarıyla karşılaştırıp şirketlerin AI’ı gerçekte ne sıklıkla gerekçe gösterdiğine ve aynı dönemde iş ilanlarında ne olduğuna bakar:
+The story of my Softito Data Analytics capstone project: 643 layoff announcements from 2026, checked against news sources, to see how often companies actually cited AI and what happened in job postings at the same time:
 
-1. **Veri doğrulama:** 146 satır elle kontrol edildi; yanlış yıla ait 4 duyuru çıkarıldı, 2 rakam düzeltildi.
-2. **Dar ve geniş tanım:** Kişilerin %16,9’u şirketin AI’ı açıkça gerekçe gösterdiği duyurularda; tüm AI etiketleri sayılırsa üst sınır %38,4.
-3. **Aylık eğilim:** AI gerekçesi Mayıs’ta zirve yaptı (duyuruların %40’ı), Ağustos’tan sonra %3–5’e geriledi.
-4. **Büyüklük:** AI gerekçeli duyuruların medyanı 295 kişi, diğerlerinin 180 (fark için %95 bootstrap GA 50–421).
-5. **İşe alım tarafı:** AI’dan bahseden ABD iş ilanlarının payı bir yılda %3,6’dan %7,2’ye çıktı (neden-sonuç iddiası değildir).
+1. **Data validation:** 146 rows checked by hand; 4 wrong-year announcements excluded, 2 numbers corrected.
+2. **Strict vs. broad definition:** 16.9% of people were in announcements where the company clearly cited AI; counting every AI label gives an upper bound of 38.4%.
+3. **Monthly trend:** AI as a stated reason peaked in May (40% of announcements) and fell to about 3–6% from August.
+4. **Size:** The median AI-attributed announcement covers 295 people, others 180 (95% bootstrap CI for the difference: 50–421).
+5. **Hiring side:** The share of US job postings mentioning AI rose from 3.6% to 7.2% in one year (not a cause-and-effect claim).
 
-**Veri**
-- Projenin temizlenmiş dosyaları: [Uguravsar75/ai-layoffs-vs-hiring-2026](https://github.com/Uguravsar75/ai-layoffs-vs-hiring-2026)
-- layoffhedge.com 2026 işten çıkarma listesi (8 Kasım 2026 sürümü) · Indeed Hiring Lab AI Tracker (CC BY 4.0) · Challenger, Gray & Christmas aylık raporları
-
----
-
-## 04 · Yağmur Yağdı, Barajlar Neden Dolmadı?
-
-![Kapak](04_istanbul_barajlari/gorseller/00_kapak.png)
-
-📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/ya%C4%9Fmur-ya%C4%9Fd%C4%B1-barajlar-neden-dolmad%C4%B1-i%CC%87stanbulun-suyunu-veriyle-okumak-898cf159f325)**
-
-İBB’nin açık verisiyle İstanbul barajlarının doluluğuna, havzalara düşen yağışa ve su tüketimine bakar:
-
-1. **Kurak dönemler:** 2005–2021 arasında doluluk 2007–2008, 2014 ve 2020–2021’de %30’un altına indi (toplam 638 gün; en düşük %9,2, Kasım 2007).
-2. **Yıllık döngü:** Yağışın %53,9’u Kasım–Mart’ta düşüyor; barajlar Nisan’da zirve, Kasım’da dip yapıyor, tüketim Temmuz’da en yüksek.
-3. **2014:** Su yılı yağışı ortalamanın üstündeydi ama kış dokuz yılın en kurağıydı; barajlar 16 Eylül 2014’te %14,5’e indi.
-4. **Korelasyonu sorgulamak:** Kış yağışı ile bahar zirvesi arasındaki 0,62’lik korelasyon büyük ölçüde 2014’ten geliyor; 2014 hariç −0,04.
-5. **Tüketim:** Ortalama günlük tüketim 2011’den 2023’e %35,6 arttı ve hiçbir yıl düşmedi.
-
-**Veri**
-- İBB Açık Veri Portalı (İSKİ verileri): baraj doluluk oranı (2005–2021), havza yağışı ve günlük su tüketimi (2011–2024). Ham dosyalar: [Uguravsar75/istanbul-baraj-analizi](https://github.com/Uguravsar75/istanbul-baraj-analizi)
+**Data**
+- Cleaned project files: [Uguravsar75/ai-layoffs-vs-hiring-2026](https://github.com/Uguravsar75/ai-layoffs-vs-hiring-2026)
+- layoffhedge.com 2026 layoff list (version of 8 November 2026) · Indeed Hiring Lab AI Tracker (CC BY 4.0) · Challenger, Gray & Christmas monthly reports
 
 ---
 
-## Çalıştırma
+## 04 · It Rained, So Why Didn't the Dams Fill?
+
+![Cover](04_istanbul_barajlari/gorseller/00_kapak.png)
+
+📖 **[Read the article on Medium (Turkish)](https://medium.com/@uguravsar10/ya%C4%9Fmur-ya%C4%9Fd%C4%B1-barajlar-neden-dolmad%C4%B1-i%CC%87stanbulun-suyunu-veriyle-okumak-898cf159f325)**
+
+Istanbul's dam occupancy, rainfall over the basins and water consumption, using İBB open data:
+
+1. **Drought periods:** Between 2005 and 2021, occupancy fell below 30% in 2007–2008, 2014 and 2020–2021 (638 days in total; lowest 9.2%, November 2007).
+2. **Annual cycle:** 53.9% of rain falls between November and March; dams peak in April and bottom out in November; consumption is highest in July.
+3. **2014:** Rainfall over the water year was above average, but the winter was the driest in nine years; the dams fell to 14.5% on 16 September 2014.
+4. **Questioning correlation:** The 0.62 correlation between winter rainfall and the spring peak comes largely from 2014; without 2014 it is −0.04.
+5. **Consumption:** Average daily consumption rose 35.6% from 2011 to 2023 and did not fall in any year.
+
+**Data**
+- İBB Open Data Portal (İSKİ data): dam occupancy rate (2005–2021), basin rainfall and daily water consumption (2011–2024). Raw files: [Uguravsar75/istanbul-baraj-analizi](https://github.com/Uguravsar75/istanbul-baraj-analizi)
+
+---
+
+## How to run
 
 ```bash
 git clone https://github.com/Uguravsar75/medium-makaleler.git
 cd medium-makaleler
 pip install -r requirements.txt
-jupyter notebook   # klasörlerden istediğiniz notebook’u açın
+jupyter notebook   # open any notebook from the folders
 ```
 
-Veriler notebook’ların içinde doğrudan internetten okunur; ayrıca indirme gerekmez.
+The notebooks read their data directly from the internet; no separate download is needed.
