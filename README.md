@@ -13,6 +13,7 @@ Her klasörde ilgili makalenin tüm grafiklerini ve rakamlarını baştan ürete
 |---|--------|---------|-----|
 | 01 | [Ortalama Yalan Söyler: Grafiğe Bakmadan Karar Vermeyin](https://medium.com/@uguravsar10/ortalama-yalan-s%C3%B6yler-grafi%C4%9Fe-bakmadan-karar-vermeyin-84ab115d802a) | Tanımlayıcı istatistik · EDA · Veri görselleştirme · Veri kalitesi | [`01_ortalama_yalan_soyler`](01_ortalama_yalan_soyler/) |
 | 02 | [Accuracy %99,9, Peki Model İşe Yarıyor mu? Dengesiz Veride Doğru Metrik Seçimi](https://medium.com/@uguravsar10/accuracy-99-9-peki-model-i%CC%87%C5%9Fe-yar%C4%B1yor-mu-dengesiz-veride-do%C4%9Fru-metrik-se%C3%A7imi-1583749e6dc8) | Dengesiz veri · Precision/Recall · ROC vs PR · Karar eşiği | [`02_accuracy_yaniltir`](02_accuracy_yaniltir/) |
+| 03 | [Yapay Zekâ İşleri mi Alıyor, Yoksa Sadece Suçu mu Üstleniyor?](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58) | Veri doğrulama · Zaman serisi · Bootstrap / Mann-Whitney · Power BI | [`03_ai_isten_cikarma`](03_ai_isten_cikarma/) |
 
 ---
 
@@ -50,6 +51,26 @@ Dengesiz veride accuracy’nin neden yanıltıcı olabileceğini ve bir sınıfl
 **Veri**
 - Kredi kartı dolandırıcılığı veri seti — Eylül 2013, Avrupalı kart sahiplerinin iki günlük 284.807 işlemi (492 dolandırıcılık). ULB Machine Learning Group & Worldline; Kaggle’da “Credit Card Fraud Detection”. Notebook, verinin herkese açık bir GitHub kopyasını kullanır (~100 MB).
 - Dal Pozzolo, A., Caelen, O., Johnson, R. A. & Bontempi, G. (2015). *Calibrating Probability with Undersampling for Unbalanced Classification.* IEEE SSCI, 159–166.
+
+---
+
+## 03 · Yapay Zekâ İşleri mi Alıyor, Yoksa Sadece Suçu mu Üstleniyor?
+
+![Kapak](03_ai_isten_cikarma/gorseller/00_kapak.png)
+
+📖 **[Makaleyi Medium’da oku](https://medium.com/@uguravsar10/yapay-zek%C3%A2-i%CC%87%C5%9Fleri-mi-al%C4%B1yor-yoksa-sadece-su%C3%A7u-mu-%C3%BCstleniyor-71f44f79ce58)**
+
+Softito Veri Analitiği bitirme projemin hikâyesi: 2026’daki 643 işten çıkarma duyurusunu haber kaynaklarıyla karşılaştırıp şirketlerin AI’ı gerçekte ne sıklıkla gerekçe gösterdiğine ve aynı dönemde iş ilanlarında ne olduğuna bakar:
+
+1. **Veri doğrulama:** 146 satır elle kontrol edildi; yanlış yıla ait 4 duyuru çıkarıldı, 2 rakam düzeltildi.
+2. **Dar ve geniş tanım:** Kişilerin %16,9’u şirketin AI’ı açıkça gerekçe gösterdiği duyurularda; tüm AI etiketleri sayılırsa üst sınır %38,4.
+3. **Aylık eğilim:** AI gerekçesi Mayıs’ta zirve yaptı (duyuruların %40’ı), Ağustos’tan sonra %3–5’e geriledi.
+4. **Büyüklük:** AI gerekçeli duyuruların medyanı 295 kişi, diğerlerinin 180 (fark için %95 bootstrap GA 50–421).
+5. **İşe alım tarafı:** AI’dan bahseden ABD iş ilanlarının payı bir yılda %3,6’dan %7,2’ye çıktı (neden-sonuç iddiası değildir).
+
+**Veri**
+- Projenin temizlenmiş dosyaları: [Uguravsar75/ai-layoffs-vs-hiring-2026](https://github.com/Uguravsar75/ai-layoffs-vs-hiring-2026)
+- layoffhedge.com 2026 işten çıkarma listesi (8 Kasım 2026 sürümü) · Indeed Hiring Lab AI Tracker (CC BY 4.0) · Challenger, Gray & Christmas aylık raporları
 
 ---
 
